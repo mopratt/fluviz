@@ -1,6 +1,7 @@
 # fluviz
 Influenza sequence visualization in R/RStudio.  
-![Image of FluViz outputs]()  
+![Image of metamap](https://github.com/mopratt/fluviz/blob/master/images/metamap_image.png)
+![Image of snpplot](https://github.com/mopratt/fluviz/blob/master/images/snpplot_image.png)
 
 These visualization tools are intended to be used with the [Influenza Classification Suite](https://github.com/Public-Health-Bioinformatics/flu_classification_suite).  
 The **Influenza Classification Suite** assigns clades to influenza protein sequences and extracts antigenic sites, which are then mapped to a reference. The ouput of the classification workflow is a line list containing an antigenic site alignment and associated metadata.  
