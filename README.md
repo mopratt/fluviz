@@ -24,5 +24,5 @@ fluviz is built in R. It uses the following main packages: **tidyverse**, **ggpl
 **ggplot2:** H. Wickham. (2016). ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York.  
 **treeio:** LG Wang, TTY Lam, S Xu, Z Dai, L Zhou, T Feng, P Guo, CW Dunn, BR Jones, T Bradley, H Zhu, Y Guan, Y Jiang, G Yu (2020). treeio: an R package for phylogenetic tree input and output with richly annotated and associated data. Molecular Biology and Evolution. 37(2):599-603. doi: 10.1093/molbev/msz240  
 **ggtree:** G Yu, D Smith, H Zhu, Y Guan, TTY Lam. (2017). ggtree: an R package for visualization and annotation of phylogenetic trees with their covariates and other associated data. Methods in Ecology and Evolution. 8(1):28-36. doi:10.1111/2041-210X.12628  
-**ggnewscale:** Elio Campitelli (2020). ggnewscale: Multiple Fill and Colour Scales in 'ggplot2'. R package version 0.4.3.https://CRAN.R-project.org/package=ggnewscale
+**ggnewscale:** Elio Campitelli (2020). ggnewscale: Multiple Fill and Colour Scales in 'ggplot2'. R package version 0.4.3.https://CRAN.R-project.org/package=ggnewscale  
 **plotly:**  C. Sievert. (2020). Interactive Web-Based Data Visualization with R, plotly, and shiny. Chapman and Hall/CRC Florida.
