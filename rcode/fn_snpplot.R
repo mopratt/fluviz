@@ -89,7 +89,7 @@ snpplot <- function(tree, line_list, metadata, clade_def) {
     theme_classic() + colScale + theme(axis.text.y=element_blank(),
                                        axis.ticks.y = element_blank(),
                                        axis.title.y = element_blank()) +
-    labs(title = "Antigenic Amino Acid Substitutions", x = "position")
+    labs(title = "Antigenic Amino Acid Substitutions", x = "position", color = "Amino Acid Group")
   snp_plot <- ggplotly(a, tooltip = "text")
   snp_plot
 }
