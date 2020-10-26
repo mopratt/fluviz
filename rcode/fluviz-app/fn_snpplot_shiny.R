@@ -1,7 +1,7 @@
 library(plotly)
 
 snpplot_shiny <- function(tree, line_list, metadata, clade_def) {
-  line_list_raw <- read_csv(line_list)
+  line_list_raw <- read_csv(line_list, col_types = cols())
   line_list <- line_list_raw %>%  distinct() %>% select(-2, -4) %>% 
     rename(label = X1, clade = X3) %>%
     slice(-2)
@@ -36,7 +36,7 @@ snpplot_shiny <- function(tree, line_list, metadata, clade_def) {
     mutate(pos = as.numeric(pos)) %>%
     right_join(aa_snp_data, by = c('label', 'pos')) %>%
     left_join(ref, by = "pos")
-  clades <- read_csv(clade_def, col_names = FALSE)
+  clades <- read_csv(clade_def, col_names = FALSE, col_types = cols())
   sites <- (length(clades) -2) / 2
   cnames <- rep(c("pos", "aa"), times = sites)
   cindex <- rep(c(1:sites), each = 2) 

@@ -14,7 +14,7 @@ combine_metadata_shiny <- function(metadata, line_list, label_col) {
                                       Zanamivir_Resistance_pheno, Peramivir_Resistance_pheno, Other_Resistance_pheno, 
                                       Patient_Status, Outbreak)
   metadata <- metadata %>% mutate(label = str_replace_all(label, " ", "_")) %>% arrange(label)
-  linelist_raw <- read_csv(line_list, skip = 3)
+  linelist_raw <- read_csv(line_list, skip = 3, col_types = cols())
   linelist <- linelist_raw %>% select(label = `Sequence Name`, 
                                       `Clade`, 
                                       Num.aa.sub = `Number of Amino Acid Substitutions in Antigenic Sites`, 

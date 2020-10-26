@@ -125,9 +125,9 @@ server <- function(input, output, session) {
     input$label
   })
   mdata <- eventReactive(input$upload, {
-    combine_metadata_shiny(metadata = gisaid(), 
+    suppressWarnings(combine_metadata_shiny(metadata = gisaid(), 
                            line_list = linelist(),
-                           label_col = label())
+                           label_col = label()))
   })
   output$data <- renderDataTable({mdata()})
   # Phylogenetic tree import: 
@@ -156,8 +156,8 @@ server <- function(input, output, session) {
     input$choose
   })
   map <- eventReactive(input$go, {
-    metamap(tree = tree1(), metadata = mdata(), 
-            cols = choices())
+    suppressWarnings(metamap(tree = tree1(), metadata = mdata(), 
+            cols = choices()))
   })
   output$metamap <- renderPlot({map()}, width = 1500, height = 1000)
   # Interactive SNP Plot:
@@ -166,7 +166,8 @@ server <- function(input, output, session) {
     cd$datapath
   })
   p <- eventReactive(input$plotly, {
-    snpplot_shiny(tree = tree1(), metadata = mdata(), line_list = linelist(), clade_def = cladedef())
+    suppressWarnings(snpplot_shiny(tree = tree1(), metadata = mdata(), 
+                  line_list = linelist(), clade_def = cladedef()))
   })
   output$metamap2 <- renderPlot({map()}, width = 1200, height = 750)
   output$snpplot <- renderPlotly({
